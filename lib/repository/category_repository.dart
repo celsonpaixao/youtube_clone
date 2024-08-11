@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:youtube_clone/interfaces/icategory.dart';
+import 'package:youtube_clone/model/category.dart';
 
-import '../model/category.dart';
-
-class Category_ViewModel {
+class CategoryRepository implements ICategory {
   final List<Category> _list_categorys = [];
-
-  Future<List<Category>> get_all_category() async {
+  @override
+  Future<List<Category>> get_all_category() {
     _list_categorys.addAll([
       Category(icon: Icons.explore_outlined),
       Category(name: "All"),
