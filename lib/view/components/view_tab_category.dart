@@ -5,9 +5,8 @@ import 'package:youtube_clone/data/state/category_state.dart';
 import 'package:youtube_clone/styles/colores.dart';
 import 'package:youtube_clone/styles/textstyles.dart';
 import 'package:youtube_clone/view/components/global_shimmer.dart';
-import 'package:youtube_clone/viewmodel/category_viewmodel.dart';
 
-import '../../model/category.dart';
+
 
 class ViewTabCategory extends StatefulWidget {
   const ViewTabCategory({super.key});
@@ -75,8 +74,8 @@ class _ViewTabCategoryState extends State<ViewTabCategory> {
                         _selectCategory(
                             index); // Atualiza a categoria selecionada
                       },
-                      child: category.name != null
-                          ? Text(category.name!,
+                      child: category.title != null
+                          ? Text(category.title!,
                               style: isSelected
                                   ? grey850_normal_text14
                                   : white_normal_text14)

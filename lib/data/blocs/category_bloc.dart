@@ -3,10 +3,10 @@ import 'dart:async';
 import 'package:youtube_clone/data/events/category_events.dart';
 import 'package:youtube_clone/data/state/category_state.dart';
 import 'package:youtube_clone/model/category.dart';
-import 'package:youtube_clone/repository/category_repository.dart';
+import 'package:youtube_clone/viewmodel/category_view_model.dart';
 
 class CategoryBloc {
-  final _repository = CategoryRepository();
+  final _viewmodel = CategoryViewModel();
   
   final StreamController<CategoryEvents> _inputCategoryController =
       StreamController<CategoryEvents>();
@@ -27,7 +27,7 @@ class CategoryBloc {
     _outputCategoryController.add(CategoryLoadingState());
 
     if (event is GetCategorys) {
-      categories = await _repository.get_all_category();
+      categories = await _viewmodel.getCategory();
     }
 
     _outputCategoryController.add(CategoryLoadedState(categories: categories));

@@ -21,5 +21,5 @@ class CategoryLoadedState extends CategoryState {
 
 class CategoryErrorState extends CategoryState {
   final Exception external;
-  CategoryErrorState(String string, {required this.external}) : super(categories: []);
+  CategoryErrorState({required this.external}) : super(categories: []);
 }

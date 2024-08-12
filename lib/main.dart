@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:youtube_clone/styles/colores.dart';
+import 'package:youtube_clone/view/components/splash_page.dart';
 
 import 'package:youtube_clone/view/router_nav_page.dart';
 
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         scaffoldBackgroundColor: Colors.transparent,
       ),
-      home: RouterNavPage(),
+      home:  SplashPage() /* RouterNavPage() */,
     );
   }
 }
