@@ -34,10 +34,10 @@ class _SplashPageState extends State<SplashPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(
-              child: Image.asset(
-                "assets/images/type=only icon.png",
-              ),
+            Image.asset(
+              "assets/images/type=only icon large.png",
+              width: 150,
+              height: 150,
             )
           ],
         ),

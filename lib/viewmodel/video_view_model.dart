@@ -6,9 +6,10 @@ class VideoViewModel {
   final List<Video> _videos = [];
 
   Future<List<Video>> get_10_videos({required int max_request}) async {
-    var videolist = await repository.get_videos(max_quest: 10);
+    var videolist = await repository.getVideos(maxQuest: max_request);
     _videos.addAll(videolist);
-
+    print(
+        "LIST VIDEOS SUCESS LOADING ===================================> \n$_videos");
     return Future.delayed(
       const Duration(seconds: 2),
       () => _videos,

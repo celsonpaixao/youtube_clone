@@ -15,3 +15,6 @@ final white_normal_text20 =
 
 final grey850_normal_text14 =
     TextStyle(color: my_grey850, fontSize: 14, fontWeight: FontWeight.normal);
+
+    final grey700_normal_text12 =
+    TextStyle(color: my_grey700, fontSize: 12, fontWeight: FontWeight.normal);

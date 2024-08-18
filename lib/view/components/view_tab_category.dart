@@ -6,8 +6,6 @@ import 'package:youtube_clone/styles/colores.dart';
 import 'package:youtube_clone/styles/textstyles.dart';
 import 'package:youtube_clone/view/components/global_shimmer.dart';
 
-
-
 class ViewTabCategory extends StatefulWidget {
   const ViewTabCategory({super.key});
 
@@ -45,10 +43,10 @@ class _ViewTabCategoryState extends State<ViewTabCategory> {
               child: GlobalShimmer(
                 itemCont: 10,
                 direction: Axis.horizontal,
-                width: 100,
-                height: 40,
+                width: 140,
+                height: 50,
                 padding: EdgeInsets.only(right: 10),
-                bordervalue: 5,
+                bordervalue: 10,
               ),
             );
           } else if (state.data is CategoryLoadedState) {

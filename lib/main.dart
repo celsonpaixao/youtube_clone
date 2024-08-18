@@ -1,17 +1,18 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:youtube_clone/styles/colores.dart';
 import 'package:youtube_clone/view/components/splash_page.dart';
 
-import 'package:youtube_clone/view/router_nav_page.dart';
-
-void main() {
+void main() async {
+  await dotenv.load(fileName: ".env");
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application. 
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         scaffoldBackgroundColor: Colors.transparent,
       ),
-      home:  SplashPage() /* RouterNavPage() */,
+      home: SplashPage() /* RouterNavPage() */,
     );
   }
 }
